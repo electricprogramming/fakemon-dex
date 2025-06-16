@@ -47,25 +47,27 @@ for (const [stat, val] of Object.entries(mon.base_stats)) {
   total += val; // accumulate total
   const statName = stat.toUpperCase().replace('_', ' ');
 
-  const container = document.createElement('div');
+  const container = document.createElement('tr');
   container.className = 'stat-container';
-  const top = document.createElement('span');
-  container.appendChild(top);
+  const text = document.createElement('td');
+  container.appendChild(text);
 
   const label = document.createElement('b');
   label.textContent = statName;
-  top.append(label, document.createTextNode(' ' + val));
+  text.append(label, document.createTextNode(' ' + val));
   
   // Bar
+  const barContainer = document.createElement('td');
   const bar = document.createElement('div');
   bar.className = 'stat-bar';
   const fill = document.createElement('div');
   fill.className = 'stat-fill';
   fill.style.width = (val / maxStat * 100) + '%';
 
+  barContainer.appendChild(bar);
   bar.appendChild(fill);
 
-  container.appendChild(bar);
+  container.appendChild(barContainer);
   statsList.appendChild(container);
 }
 const totalContainer = document.createElement('div');
