@@ -177,7 +177,7 @@
   // Populate header info
   document.getElementById('name').textContent = mon.basic.name;
   document.getElementById('number').textContent = `#${mon.basic.number}`;
-  document.getElementById('sprite').src = mon.basic.sprite;
+  document.getElementById('sprite').src = `/assets/${mon.basic.name}.png`;
 
   // Types badges with colors
   const typesDiv = document.getElementById('types');
