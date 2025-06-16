@@ -90,3 +90,4 @@ mon.name_origin.forEach(origin => {
   div.textContent = `${origin.word} — ${origin.meaning}`;
   originList.appendChild(div);
 });
+document.body.style.display = 'block';
