@@ -49,7 +49,9 @@ for (const [stat, val] of Object.entries(mon.base_stats)) {
 
   const container = document.createElement('tr');
   container.className = 'stat-container';
+  
   const text = document.createElement('td');
+  text.className = 'stat-text';
   container.appendChild(text);
 
   const label = document.createElement('b');
@@ -58,6 +60,7 @@ for (const [stat, val] of Object.entries(mon.base_stats)) {
   
   // Bar
   const barContainer = document.createElement('td');
+  barContainer.className = 'bar-container';
   const bar = document.createElement('div');
   bar.className = 'stat-bar';
   const fill = document.createElement('div');
