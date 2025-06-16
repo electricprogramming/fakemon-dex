@@ -52,7 +52,7 @@ for (const [stat, val] of Object.entries(mon.base_stats)) {
 
   const label = document.createElement('b');
   label.textContent = statName;
-  top.append(label, document.createTextNode(val + ' '));
+  top.append(label, document.createTextNode(' ' + val));
   
   // Bar
   const bar = document.createElement('div');
