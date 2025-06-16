@@ -83,7 +83,7 @@ totalContainer.appendChild(totalLabel);
 const totalValue = document.createElement('td');
 totalValue.className = 'stat-value';
 totalValue.textContent = '  ' + total;
-totalContainer.appendChild(value);
+totalContainer.appendChild(totalValue);
 statsList.appendChild(totalContainer);
 
 
