@@ -47,6 +47,7 @@ for (const [stat, val] of Object.entries(mon.base_stats)) {
   const statName = stat.toUpperCase().replace('_', ' ');
 
   const container = document.createElement('div');
+  container.className = 'stat-container';
   const top = document.createElement('span');
   container.appendChild(top);
 
