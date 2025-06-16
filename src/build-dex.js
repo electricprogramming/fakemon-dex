@@ -44,6 +44,7 @@ let total = 0;
 
 for (const [stat, val] of Object.entries(mon.base_stats)) {
   total += val; // accumulate total
+  const container = document.createElement('div');
 
   const dt = document.createElement('dt');
   dt.textContent = stat.toUpperCase().replace('_', ' ');
@@ -62,16 +63,14 @@ for (const [stat, val] of Object.entries(mon.base_stats)) {
   dd.appendChild(document.createTextNode(val + ' '));
   dd.appendChild(bar);
 
-  statsList.appendChild(dt);
-  statsList.appendChild(dd);
+  container.appendChild(dt);
+  container.appendChild(dd);
+  statsList.appendChild(container);
 }
-
 const totalDt = document.createElement('dt');
 totalDt.textContent = 'TOTAL';
-
 const totalDd = document.createElement('dd');
 totalDd.textContent = total;
-
 statsList.appendChild(totalDt);
 statsList.appendChild(totalDd);
 
