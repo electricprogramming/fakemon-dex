@@ -33,7 +33,7 @@ document.getElementById('hidden-ability').textContent = mon.basic.ability.hidden
 // Breeding
 document.getElementById('egg-groups').textContent = mon.breeding.egg_groups.join(', ');
 const gender = mon.breeding.gender;
-document.getElementById('gender-ratio').textContent = 
+document.getElementById('gender-ratio').textContent = gender.genderless ? 'genderless' :
   `♂ ${(gender.male * 100).toFixed(0)}% / ♀ ${(gender.female * 100).toFixed(0)}%`;
 document.getElementById('egg-cycles').textContent = mon.breeding.egg_cycles;
 
