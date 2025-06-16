@@ -1,5 +1,6 @@
 import typeColors from './type-colors.js';
 import fakemonList from './fakemon-list.js';
+import { weight, height } from './conversions.js';
 const fakemonName = window.location.pathname.split('/dex/')[1];
 const mon = fakemonList[fakemonName];
 console.log(`Bulding dex for ${fakemonName}`);
@@ -24,10 +25,10 @@ mon.basic.type.forEach(t => {
 
 // Basic Info
 document.getElementById('species').textContent = mon.basic.species;
-document.getElementById('height').textContent = mon.basic.height + ' m';
-document.getElementById('weight').textContent = mon.basic.weight + ' kg';
-document.getElementById('ability').textContent = mon.basic.ability.normal.join(', ');
-document.getElementById('hidden-ability').textContent = mon.basic.ability.hidden;
+document.getElementById('height').textContent = `${mon.basic.height} m (${height(mon.basic.height)})`;
+document.getElementById('weight').textContent = `${mon.basic.weight} kg (${weight(mon.basic.weight)})`;
+/*document.getElementById('ability').textContent = mon.basic.ability.normal.join(', ');
+document.getElementById('hidden-ability').textContent = mon.basic.ability.hidden;*/
 
 // Breeding
 document.getElementById('egg-groups').textContent = mon.breeding.egg_groups.join(', ');
