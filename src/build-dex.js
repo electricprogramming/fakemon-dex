@@ -39,7 +39,12 @@ document.getElementById('egg-cycles').textContent = mon.breeding.egg_cycles;
 // Base stats with bars
 const statsList = document.getElementById('stats-list');
 const maxStat = 255; // for bar scaling
+
+let total = 0;
+
 for (const [stat, val] of Object.entries(mon.base_stats)) {
+  total += val; // accumulate total
+
   const dt = document.createElement('dt');
   dt.textContent = stat.toUpperCase().replace('_', ' ');
   const dd = document.createElement('dd');
@@ -60,6 +65,16 @@ for (const [stat, val] of Object.entries(mon.base_stats)) {
   statsList.appendChild(dt);
   statsList.appendChild(dd);
 }
+
+const totalDt = document.createElement('dt');
+totalDt.textContent = 'TOTAL';
+
+const totalDd = document.createElement('dd');
+totalDd.textContent = total;
+
+statsList.appendChild(totalDt);
+statsList.appendChild(totalDd);
+
 
 // Evolution chain
 const evoList = document.getElementById('evo-list');
