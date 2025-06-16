@@ -1,4 +1,4 @@
-const fakemmonList = {
+const fakemonList = {
   narwhali: {
     basic: {
       name: 'Narwhali',
