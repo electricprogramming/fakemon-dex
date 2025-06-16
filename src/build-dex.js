@@ -75,12 +75,16 @@ for (const [stat, val] of Object.entries(mon.base_stats)) {
   container.appendChild(barContainer);
   statsList.appendChild(container);
 }
-const totalContainer = document.createElement('div');
-const totalLabel = document.createElement('b');
+const totalContainer = document.createElement('tr');
+const totalLabel = document.createElement('td');
+totalLabel.className = 'stat-label';
 totalLabel.textContent = 'TOTAL';
-const totalVal = document.createTextNode(' ' + total);
-totalContainer.append(totalLabel, totalVal);
-statsList.append(totalContainer);
+totalContainer.appendChild(totalLabel);
+const totalValue = document.createElement('td');
+totalValue.className = 'stat-value';
+totalValue.textContent = '  ' + total;
+totalContainer.appendChild(value);
+statsList.appendChild(totalContainer);
 
 
 // Evolution chain
