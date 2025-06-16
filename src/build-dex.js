@@ -47,10 +47,10 @@ for (const [stat, val] of Object.entries(mon.base_stats)) {
   const statName = stat.toUpperCase().replace('_', ' ');
 
   const container = document.createElement('div');
-  const top = document.createElement('div');
+  const top = document.createElement('span');
   container.appendChild(top);
 
-  const label = document.createElement('p');
+  const label = document.createElement('b');
   label.textContent = statName;
   top.append(label, document.createTextNode(val + ' '));
   
