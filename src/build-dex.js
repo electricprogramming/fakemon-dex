@@ -78,9 +78,9 @@ statsList.append(totalContainer);
 
 // Evolution chain
 const evoList = document.getElementById('evo-list');
-for(let i=0; i < mon.evo.length; i++){
+for (let i = 0; i < mon.evo.length; i++) {
   const item = mon.evo[i];
-  if(item.toLowerCase().startsWith('level') || item.toLowerCase().startsWith('use')) {
+  if (item.toLowerCase().startsWith('level') || item.toLowerCase().startsWith('use')) {
     // arrow or condition
     const arrow = document.createElement('div');
     arrow.className = 'evo-arrow';
@@ -92,6 +92,7 @@ for(let i=0; i < mon.evo.length; i++){
     stage.className = 'evo-stage';
     stage.textContent = item;
     evoList.appendChild(stage);
+    if (item === mon.basic.name) stage.style.fontWeight = 'bold';
   }
 }
 
