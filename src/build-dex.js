@@ -70,7 +70,7 @@ for (const [stat, val] of Object.entries(mon.base_stats)) {
 const totalContainer = document.createElement('div');
 const totalLabel = document.createElement('b');
 totalLabel.textContent = 'TOTAL';
-const totalVal = document.createTextNode(total);
+const totalVal = document.createTextNode(' ' + total);
 totalContainer.append(totalLabel, totalVal);
 statsList.append(totalContainer);
 
