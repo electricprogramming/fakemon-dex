@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fakemon Pokédex</title>
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f8fa;
+    color: #222;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  header img {
+    width: 96px;
+    height: 96px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    object-fit: contain;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  h1 {
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  .number {
+    color: #666;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  .types {
+    margin: 0.5rem 0 1rem;
+  }
+  .type {
+    display: inline-block;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    margin-right: 0.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    user-select: none;
+  }
+  section {
+    margin-bottom: 1.5rem;
+  }
+  .stat-bar {
+    background: #ddd;
+    border-radius: 12px;
+    height: 12px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0.3rem;
+  }
+  .stat-fill {
+    height: 100%;
+    background: #4a90e2;
+    border-radius: 12px 0 0 12px;
+  }
+  dt {
+    font-weight: 700;
+    margin-top: 0.5rem;
+  }
+  dd {
+    margin: 0 0 0.5rem 1rem;
+  }
+  .evo-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .evo-stage {
+    background: #e3f2fd;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    flex: 1 1 100px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  .evo-arrow {
+    font-weight: 700;
+    font-size: 1.2rem;
+    user-select: none;
+  }
+  .name-origin > div {
+    background: #eef6f9;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 3rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img id="sprite" src="" alt="Pokémon Sprite" />
+  <div>
+    <h1 id="name"></h1>
+    <p class="number" id="number"></p>
+    <div class="types" id="types"></div>
+  </div>
+</header>
+
+<section id="basic-info">
+  <h2>Basic Information</h2>
+  <dl>
+    <dt>Species</dt><dd id="species"></dd>
+    <dt>Height</dt><dd id="height"></dd>
+    <dt>Weight</dt><dd id="weight"></dd>
+    <dt>Ability</dt><dd id="ability"></dd>
+    <dt>Hidden Ability</dt><dd id="hidden-ability"></dd>
+  </dl>
+</section>
+
+<section id="breeding">
+  <h2>Breeding</h2>
+  <dl>
+    <dt>Egg Groups</dt><dd id="egg-groups"></dd>
+    <dt>Gender Ratio</dt><dd id="gender-ratio"></dd>
+    <dt>Egg Cycles</dt><dd id="egg-cycles"></dd>
+  </dl>
+</section>
+
+<section id="base-stats">
+  <h2>Base Stats</h2>
+  <dl id="stats-list">
+    <!-- Stats inserted here -->
+  </dl>
+</section>
+
+<section id="evolution">
+  <h2>Evolution</h2>
+  <div class="evo-list" id="evo-list"></div>
+</section>
+
+<section id="dex-entry">
+  <h2>Pokédex Entry</h2>
+  <p id="dex-text"></p>
+</section>
+
+<section id="name-origin">
+  <h2>Name Origin</h2>
+  <div id="origin-list" class="name-origin"></div>
+</section>
+
+<footer>Pokédex page generated dynamically</footer>
+
+<script type="module">
+  import fakemonList from '/src/fakemon-list.js';
+  const fakemonName = window.location.pathname.split('/dex/')[1];
+  const mon = fakemonList[fakemonName];
+  console.log(`Bulding dex for ${fakemonName}`);
+
+  document.title = `Fakemon Pokédex - ${fakemonName}`
+  // Populate header info
+  document.getElementById('name').textContent = mon.basic.name;
+  document.getElementById('number').textContent = `#${mon.basic.number}`;
+  document.getElementById('sprite').src = mon.basic.sprite;
+
+  // Types badges with colors
+  const typesDiv = document.getElementById('types');
+  mon.basic.type.forEach(t => {
+    const span = document.createElement('span');
+    span.className = 'type';
+    span.textContent = t;
+    // lower case for color key
+    const key = t.toLowerCase();
+    span.style.backgroundColor = typeColors[key] || '#777';
+    typesDiv.appendChild(span);
+  });
+
+  // Basic Info
+  document.getElementById('species').textContent = mon.basic.species;
+  document.getElementById('height').textContent = mon.basic.height + ' m';
+  document.getElementById('weight').textContent = mon.basic.weight + ' kg';
+  document.getElementById('ability').textContent = mon.basic.ability.normal.join(', ');
+  document.getElementById('hidden-ability').textContent = mon.basic.ability.hidden;
+
+  // Breeding
+  document.getElementById('egg-groups').textContent = mon.breeding.egg_groups.join(', ');
+  const gender = mon.breeding.gender;
+  document.getElementById('gender-ratio').textContent = 
+    `♂ ${(gender.male * 100).toFixed(0)}% / ♀ ${(gender.female * 100).toFixed(0)}%`;
+  document.getElementById('egg-cycles').textContent = mon.breeding.egg_cycles;
+
+  // Base stats with bars
+  const statsList = document.getElementById('stats-list');
+  const maxStat = 255; // for bar scaling
+  for (const [stat, val] of Object.entries(mon.base_stats)) {
+    const dt = document.createElement('dt');
+    dt.textContent = stat.toUpperCase().replace('_', ' ');
+    const dd = document.createElement('dd');
+
+    // Bar container
+    const bar = document.createElement('div');
+    bar.className = 'stat-bar';
+
+    // Bar fill
+    const fill = document.createElement('div');
+    fill.className = 'stat-fill';
+    fill.style.width = (val / maxStat * 100) + '%';
+
+    bar.appendChild(fill);
+    dd.appendChild(document.createTextNode(val + ' '));
+    dd.appendChild(bar);
+
+    statsList.appendChild(dt);
+    statsList.appendChild(dd);
+  }
+
+  // Evolution chain
+  const evoList = document.getElementById('evo-list');
+  for(let i=0; i < mon.evo.length; i++){
+    const item = mon.evo[i];
+    if(item.toLowerCase().startsWith('level') || item.toLowerCase().startsWith('use')) {
+      // arrow or condition
+      const arrow = document.createElement('div');
+      arrow.className = 'evo-arrow';
+      arrow.textContent = '→ ' + item;
+      evoList.appendChild(arrow);
+    } else {
+      // stage name
+      const stage = document.createElement('div');
+      stage.className = 'evo-stage';
+      stage.textContent = item;
+      evoList.appendChild(stage);
+    }
+  }
+
+  // Dex entry
+  document.getElementById('dex-text').textContent = mon.dex_entry;
+
+  // Name origins
+  const originList = document.getElementById('origin-list');
+  mon.name_origin.forEach(origin => {
+    const div = document.createElement('div');
+    div.textContent = `${origin.word} — ${origin.meaning}`;
+    originList.appendChild(div);
+  });
+</script>
+
+</body>
+</html>
