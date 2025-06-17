@@ -38,7 +38,7 @@ document.getElementById('gender-ratio').textContent = gender.genderless ? 'gende
 document.getElementById('egg-cycles').textContent = mon.breeding.egg_cycles;
 
 // Base stats with bars
-const statsList = document.getElementById('stats-list');
+const statsList = document.getElementById('stats-list').querySelector('tbody');
 const maxStat = 255; // for bar scaling
 
 let total = 0;
