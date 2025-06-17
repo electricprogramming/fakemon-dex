@@ -5,11 +5,12 @@ const fakemonName = window.location.pathname.split('/dex/')[1];
 const mon = fakemonList[fakemonName];
 console.log(`Bulding dex for ${fakemonName}`);
 
-document.title = `Fakemon Pokédex - ${fakemonName}`
+document.title = `Fakemon Pokédex - ${fakemonName}`;
 // Populate header info
 document.getElementById('name').textContent = mon.basic.name;
 document.getElementById('number').textContent = `#${mon.basic.number}`;
 document.getElementById('sprite').src = `/assets/${mon.basic.name}.png`;
+document.getElementById('sprite').alt = `${mon.basic.name} Sprite`;
 
 // Types badges with colors
 const typesDiv = document.getElementById('types');
