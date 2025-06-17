@@ -3,6 +3,13 @@ import fakemonList from './fakemon-list.js';
 import { weight, height } from './conversions.js';
 const fakemonName = window.location.pathname.split('/dex/')[1];
 const mon = fakemonList[fakemonName];
+
+if (!mon) {
+  document.body.innerHTML = `<h1>Fakemon Not Found</h1><p>No data found for "${fakemonName}".</p>`;
+  document.body.style.display = 'block';
+  throw new Error(`Fakemon "${fakemonName}" not found.`);
+}
+
 console.log(`Bulding dex for ${fakemonName}`);
 
 document.title = `Fakemon Pokédex - ${fakemonName}`;
