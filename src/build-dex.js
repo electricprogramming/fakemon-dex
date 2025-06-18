@@ -1,6 +1,8 @@
 import typeColors from './type-colors.js';
 import fakemonList from './fakemon-list.js';
 import { weight, height } from './conversions.js';
+import calculateTypeDefenses from './type-defenses.css';
+
 const fakemonName = window.location.pathname.split('/dex/')[1];
 const mon = fakemonList[fakemonName];
 
@@ -26,8 +28,7 @@ mon.basic.type.forEach(t => {
   span.className = 'type';
   span.textContent = t;
   // lower case for color key
-  const key = t.toLowerCase();
-  span.classList.add(key);
+  span.classList.add(t);
   typesDiv.appendChild(span);
 });
 
@@ -38,6 +39,9 @@ document.getElementById('weight').textContent = `${mon.basic.weight} kg (${weigh
 document.getElementById('ability-1').textContent = mon.basic.ability.normal[0];
 document.getElementById('ability-2').textContent = mon.basic.ability.normal[1] || '--';
 document.getElementById('hidden-ability').textContent = mon.basic.ability.hidden || '--';
+
+const typeDefenses = calculateTypeDefenses(mon.basic.type);
+typeDefenses.
 
 // Breeding
 document.getElementById('egg-groups').textContent = mon.breeding.egg_groups.join(', ');
