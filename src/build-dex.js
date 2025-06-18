@@ -27,7 +27,7 @@ mon.basic.type.forEach(t => {
   span.textContent = t;
   // lower case for color key
   const key = t.toLowerCase();
-  span.style.backgroundColor = typeColors[key] || '#777';
+  span.classList.add(key);
   typesDiv.appendChild(span);
 });
 
