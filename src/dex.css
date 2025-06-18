@@ -73,7 +73,6 @@ table#basic-info {
   grid-template-columns: repeat(6, 1fr);
   gap: 5px;
   width: 100%;
-  margin: 10px auto;
 }
 
 .type-box {
