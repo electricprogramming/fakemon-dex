@@ -35,8 +35,9 @@ mon.basic.type.forEach(t => {
 document.getElementById('species').textContent = mon.basic.species;
 document.getElementById('height').textContent = `${mon.basic.height} m (${height(mon.basic.height)})`;
 document.getElementById('weight').textContent = `${mon.basic.weight} kg (${weight(mon.basic.weight)})`;
-/*document.getElementById('ability').textContent = mon.basic.ability.normal.join(', ');
-document.getElementById('hidden-ability').textContent = mon.basic.ability.hidden;*/
+document.getElementById('ability-1').textContent = mon.basic.ability.normal[0];
+document.getElementById('ability-1').textContent = mon.basic.ability.normal[1] || '--';
+document.getElementById('hidden-ability').textContent = mon.basic.ability.hidden || '--';
 
 // Breeding
 document.getElementById('egg-groups').textContent = mon.breeding.egg_groups.join(', ');
