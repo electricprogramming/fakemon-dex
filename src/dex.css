@@ -71,14 +71,15 @@ table#basic-info {
 .type-defense-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
+  gap: 5px;
   width: 100%;
   margin: 0 auto;
 }
 
 .type-box {
-  padding: 10px;
-  border-radius: 6px;
+  font-size: 0.75em;
+  padding: 5px;
+  border-radius: 4px;
   text-align: center;
   color: white;
   font-weight: bold;
@@ -90,8 +91,8 @@ table#basic-info {
   font-size: 0.9em;
   margin-top: 5px;
   background: rgba(0, 0, 0, 0.3);
-  padding: 2px 5px;
-  border-radius: 3px;
+  padding: 1px 2.5px;
+  border-radius: 2px;
 }
 
 table.info {
