@@ -70,6 +70,9 @@ table#basic-info {
 
 #type-defenses, #breeding {
   vertical-align: top;
+  h2 {
+    margin-bottom: 10px;
+  }
 }
 
 .type-defense-grid {
