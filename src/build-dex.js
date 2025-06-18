@@ -1,7 +1,6 @@
-import typeColors from './type-colors.js';
 import fakemonList from './fakemon-list.js';
 import { weight, height } from './conversions.js';
-import calculateTypeDefenses from './type-defenses.css';
+import calculateTypeDefenses from './type-defenses.js';
 
 const fakemonName = window.location.pathname.split('/dex/')[1];
 const mon = fakemonList[fakemonName];
@@ -41,7 +40,7 @@ document.getElementById('ability-2').textContent = mon.basic.ability.normal[1] |
 document.getElementById('hidden-ability').textContent = mon.basic.ability.hidden || '--';
 
 const typeDefenses = calculateTypeDefenses(mon.basic.type);
-
+Object.entries(typeDefenses)
 
 // Breeding
 document.getElementById('egg-groups').textContent = mon.breeding.egg_groups.join(', ');
