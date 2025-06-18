@@ -68,6 +68,10 @@ table#basic-info {
   color: #333;
 }
 
+#type-defenses, #breeding {
+  vertical-align: top;
+}
+
 .type-defense-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
