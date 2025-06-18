@@ -3,7 +3,7 @@ const fakemonList = {
     basic: {
       name: 'Narwhali',
       number: '007',
-      type: ['water'],
+      type: ['Water'],
       species: 'Narwhal',
       height: 0.6,
       weight: 6.0,
