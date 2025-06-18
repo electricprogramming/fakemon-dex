@@ -40,7 +40,9 @@ document.getElementById('ability-2').textContent = mon.basic.ability.normal[1] |
 document.getElementById('hidden-ability').textContent = mon.basic.ability.hidden || '--';
 
 const typeDefenses = calculateTypeDefenses(mon.basic.type);
-Object.entries(typeDefenses)
+Object.entries(typeDefenses).forEach(([type, effectiveness]) => {
+  
+})
 
 // Breeding
 document.getElementById('egg-groups').textContent = mon.breeding.egg_groups.join(', ');

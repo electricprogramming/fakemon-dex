@@ -8,7 +8,7 @@ const allTypes = Object.keys(typeChart);
  * @param {Object} extraMultipliers - Optional additional multipliers, e.g. { Fire: 2 } for fluffy
  * @returns {Object} - Object of type -> total multiplier.
  */
-function calculateTypeDefenses(types, extraMultipliers = {}) {
+export default function calculateTypeDefenses(types, extraMultipliers = {}) {
   const defense = {};
 
   for (const attackType of allTypes) {
