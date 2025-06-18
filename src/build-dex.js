@@ -41,7 +41,7 @@ document.getElementById('hidden-ability').textContent = mon.basic.ability.hidden
 
 const typeDefenses = calculateTypeDefenses(mon.basic.type);
 Object.entries(typeDefenses).forEach(([type, effectiveness]) => {
-  document.querySelector(`.type-box.${type}`).querySelector('multiplier').textContent = effectiveness;
+  document.querySelector(`.type-box.${type}`).querySelector('.multiplier').textContent = effectiveness;
 })
 
 // Breeding
