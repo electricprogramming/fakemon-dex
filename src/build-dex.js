@@ -66,7 +66,7 @@ for (const [stat, val] of Object.entries(mon.base_stats)) {
 
   const value = document.createElement('td');
   value.className = 'stat-value';
-  value.textContent = ' ' + val;
+  value.textContent = '  ' + val;
   container.appendChild(value);
   
   // Bar
