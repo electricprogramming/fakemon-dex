@@ -172,6 +172,10 @@ table#stats-list {
   flex: 1 1 100px;
   text-transform: capitalize;
 }
+a.evo-stage {
+  text-decoration: none;
+  color: black;
+}
 .evo-arrow {
   font-weight: 600;
   font-size: 1.2rem;

@@ -126,7 +126,7 @@ for (let i = 0; i < mon.evo.length; i++) {
     const stage = document.createElement(isCurrent ? 'div' : 'a');
     stage.className = 'evo-stage';
     stage.textContent = item;
-    if (!isCurrent) stage.href = `/dex/${item}`;
+    if (!isCurrent) stage.href = `/dex/${item.toLowerCase()}`;
     evoList.appendChild(stage);
     if (isCurrent) stage.style.fontWeight = 'bold';
   }
