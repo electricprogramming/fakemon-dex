@@ -44,6 +44,15 @@ Object.entries(typeDefenses).forEach(([type, effectiveness]) => {
   document.querySelector(`.type-box.${type}`).querySelector('.multiplier').textContent = effectiveness;
 })
 
+// Training
+document.getElementById('ev-yield').textContent =
+  Object.entries(mon.training.ev_yield)
+  .map(([key, val]) => `${val} ${key.toUpperCase().replaceAll('_', ' ')}`)
+  .join(', ');
+document.getElementById('catch-rate').textContent = `${mon.training.catch_rate} (${(mon.training.catch_rate / 255) * 1/3}%)`;
+document.getElementById('growth-rate').textContent = mon.training.growth_rate;
+
+
 // Breeding
 document.getElementById('egg-groups').textContent = mon.breeding.egg_groups.join(', ');
 const gender = mon.breeding.gender;
@@ -113,11 +122,13 @@ for (let i = 0; i < mon.evo.length; i++) {
     evoList.appendChild(arrow);
   } else {
     // stage name
-    const stage = document.createElement('div');
+    const isCurrent = (item === mon.basic.name);
+    const stage = document.createElement(isCurrent ? 'div' : a);
     stage.className = 'evo-stage';
     stage.textContent = item;
+    if (!isCurrent) stage.href = `/dex/${item}`;
     evoList.appendChild(stage);
-    if (item === mon.basic.name) stage.style.fontWeight = 'bold';
+    if (isCurrent) stage.style.fontWeight = 'bold';
   }
 }
 
