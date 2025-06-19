@@ -49,7 +49,7 @@ document.getElementById('ev-yield').textContent =
   Object.entries(mon.training.ev_yield)
   .map(([key, val]) => `${val} ${key.toUpperCase().replaceAll('_', ' ')}`)
   .join(', ');
-document.getElementById('catch-rate').textContent = `${mon.training.catch_rate} (${((mon.training.catch_rate / 255) * 1/3 * 100).toFixed(1)}%)`;
+document.getElementById('catch-rate').textContent = `${mon.training.catch_rate} (${((mon.training.catch_rate / 255) * 1/3 * 100).toFixed(1)}% with Pokéball, full HP)`;
 document.getElementById('growth-rate').textContent = mon.training.growth_rate;
 
 
