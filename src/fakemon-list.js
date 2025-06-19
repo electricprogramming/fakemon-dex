@@ -12,6 +12,11 @@ const fakemonList = {
         hidden: 'Swift Swim'
       }
     },
+    training: {
+      ev_yield: { hp: 1 },
+      catch_rate: 45,
+      growth_rate: 'Medium Slow'
+    },
     breeding: {
       egg_groups: ['Water-2'],
       gender: { male: 0.5, female: 0.5 },

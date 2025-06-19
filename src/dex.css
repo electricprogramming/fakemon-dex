@@ -68,7 +68,7 @@ table#basic-info {
   color: #333;
 }
 
-#type-defenses, #breeding {
+#type-defenses, #training, #breeding {
   vertical-align: top;
   h2 {
     margin-bottom: 10px;
