@@ -123,7 +123,7 @@ for (let i = 0; i < mon.evo.length; i++) {
   } else {
     // stage name
     const isCurrent = (item === mon.basic.name);
-    const stage = document.createElement(isCurrent ? 'div' : a);
+    const stage = document.createElement(isCurrent ? 'div' : 'a');
     stage.className = 'evo-stage';
     stage.textContent = item;
     if (!isCurrent) stage.href = `/dex/${item}`;
