@@ -19,7 +19,8 @@ document.getElementById('name').textContent = mon.basic.name;
 document.getElementById('number').textContent = `#${mon.basic.number}`;
 document.getElementById('sprite').src = `/assets/${mon.basic.name}.png`;
 document.getElementById('sprite').alt = `${mon.basic.name} Sprite`;
-document.getElementById('sprite').addEventListener('contextmenu', function() {
+document.getElementById('sprite').addEventListener('contextmenu', function(e) {
+  e.preventDefault();
   this.shiny = !this.shiny;
   this.src = `/assets/${mon.basic.name}${this.shiny ? '-shiny' : ''}.png`
 });
