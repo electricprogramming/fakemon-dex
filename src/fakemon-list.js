@@ -69,12 +69,12 @@ const fakemonList = {
       egg_cycles: 20
     },
     base_stats: {
-      hp: 80,
-      attack: 45,
-      defense: 60,
+      hp: 75,
+      attack: 55,
+      defense: 50,
       sp_atk: 80,
       sp_def: 60,
-      speed: 75
+      speed: 80
     },
     evo: [
       'Narwhali',
