@@ -22,7 +22,8 @@ document.getElementById('sprite').alt = `${mon.basic.name} Sprite`;
 document.getElementById('sprite').addEventListener('contextmenu', function(e) {
   e.preventDefault();
   this.shiny = !this.shiny;
-  this.src = `/assets/${mon.basic.name}${this.shiny ? '-shiny' : ''}.png`
+  this.src = `/assets/${mon.basic.name}${this.shiny ? '-shiny' : ''}.png`;
+  this.alt = `${mon.basic.name} Sprite${this.shiny ? ' (shiny)' : ''}`
 });
 
 // Types badges with colors
