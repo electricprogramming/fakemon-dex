@@ -70,8 +70,8 @@ const fakemonList = {
     },
     base_stats: {
       hp: 75,
-      attack: 55,
-      defense: 50,
+      attack: 65,
+      defense: 55,
       sp_atk: 80,
       sp_def: 60,
       speed: 80
