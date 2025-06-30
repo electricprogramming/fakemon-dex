@@ -1,4 +1,60 @@
 const fakemonList = {
+  bambao: {
+    basic: {
+      name: 'Bambao',
+      number: '001',
+      type: ['Grass'],
+      species: 'Panda Cub',
+      height: 0.5,
+      weight: 7.6,
+      ability: {
+        normal: ['Overgrow'],
+        hidden: 'Inner Focus'
+      }
+    },
+    training: {
+      ev_yield: { attack: 1 },
+      catch_rate: 45,
+      growth_rate: 'Medium Slow'
+    },
+    breeding: {
+      egg_groups: ['Field', 'Human-Like'],
+      gender: { male: 0.875, female: 0.125 },
+      egg_cycles: 20
+    },
+    base_stats: {
+      hp: 50,
+      attack: 65,
+      defense: 55,
+      sp_atk: 40,
+      sp_def: 45,
+      speed: 55
+    },
+    evo: [
+      'Bambao',
+      'Level 16',
+      'Bambash',
+      'Level 36',
+      'Panlin'
+    ],
+    dex_entry: 'Bambao are playful explorers often spotted climbing trees or traipsing through the forest. From a young age, they have an affinity for food and eat for a large portion of their waking hours.',
+    name_origin: [
+      {
+        word: 'bamboo',
+        meaning: 'a type of fast-growing grass with hard, hollow stems, commonly eaten by pandas'
+      },
+      {
+        word: 'bǎo',
+        meaning: 'Chinese for treasure'
+      }
+    ]
+  },
+  bambash: {
+
+  },
+  panlin: {
+
+  },
   narwhali: {
     basic: {
       name: 'Narwhali',
@@ -6,7 +62,7 @@ const fakemonList = {
       type: ['Water'],
       species: 'Narwhal',
       height: 0.6,
-      weight: 6.0,
+      weight: 11.2,
       ability: {
         normal: ['Torrent'],
         hidden: 'Swift Swim'
@@ -52,7 +108,7 @@ const fakemonList = {
       type: ['Water'],
       species: 'Narwhal',
       height: 1.2,
-      weight: 13.5,
+      weight: 28.5,
       ability: {
         normal: ['Torrent'],
         hidden: 'Swift Swim'
@@ -102,7 +158,7 @@ const fakemonList = {
       type: ['Water'],
       species: 'Narwhal',
       height: 2,
-      weight: 45.6,
+      weight: 92.3,
       ability: {
         normal: ['Torrent'],
         hidden: 'Swift Swim'
