@@ -35,7 +35,7 @@ const fakemonList = {
       'Level 16',
       'Olaena',
       'Level 36',
-      'Narquarius'
+      'Narquarion'
     ],
     dex_entry: `Narwhali is a playful, curious Pokémon often spotted spinning joyfully through cold coastal waters. Its small tusk is highly sensitive to the environment, allowing it to detect underwater currents and schools of fish.`,
     name_origin: [
@@ -81,9 +81,9 @@ const fakemonList = {
       'Level 16',
       'Olaena',
       'Level 36',
-      'Narquarius'
+      'Narquarion'
     ],
-    dex_entry: `Olaena glides through arctic waters with elegance and grace. Its tusk has fully developed into a spiraled horn capable of sensing even the faintest vibrations in the sea. Olaena communicate with each other using complex series of clicks and whistles.`,
+    dex_entry: `Olaena glides through arctic waters with elegance and grace. Its tusk is slowly maturing into a spiraled horn, now capable of sensing even the faintest vibrations in the sea. Olaena communicate with each other using complex series of clicks and whistles.`,
     name_origin: [
       {
         word: 'ola',
@@ -94,6 +94,56 @@ const fakemonList = {
         meaning: 'Spanish word for whale'
       }
     ]
+  },
+  narquarion: {
+    basic: {
+      name: 'Narquarion',
+      number: '009',
+      type: ['Water'],
+      species: 'Narwhal',
+      height: 2,
+      weight: 45.6,
+      ability: {
+        normal: ['Torrent'],
+        hidden: 'Swift Swim'
+      }
+    },
+    training: {
+      ev_yield: { sp_atk: 1, speed: 1 },
+      catch_rate: 45,
+      growth_rate: 'Medium Slow'
+    },
+    breeding: {
+      egg_groups: ['Water-2'],
+      gender: { male: 0.5, female: 0.5 },
+      egg_cycles: 20
+    },
+    base_stats: {
+      hp: 90,
+      attack: 95,
+      defense: 75,
+      sp_atk: 100,
+      sp_def: 80,
+      speed: 95
+    },
+    evo: [
+      'Narwhali',
+      'Level 16',
+      'Olaena',
+      'Level 36',
+      'Narquarion'
+    ],
+    dex_entry: `Narquarion's long, sleek tusk is now fully developed, used both to detect changes in the environment and as a sharp weapon in battle. Highly intelligent and social, Narquarion live in large pods with Narwhali and Olaena.`,
+    name_origin: [
+      {
+        word: 'narwhal',
+        meaning: 'species of whale known for its tusk'
+      },
+      {
+        word: 'aqua',
+        meaning: 'latin for water'
+      }
+    ]
   }
 };
-export default fakemonList
+export default fakemonList;
