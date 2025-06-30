@@ -39,7 +39,7 @@ mon.basic.type.forEach(t => {
 });
 
 // Basic Info
-document.getElementById('species').textContent = mon.basic.species;
+document.getElementById('species').textContent = `${mon.basic.species} Pokémon`;
 document.getElementById('height').textContent = `${mon.basic.height} m (${height(mon.basic.height)})`;
 document.getElementById('weight').textContent = `${mon.basic.weight} kg (${weight(mon.basic.weight)})`;
 document.getElementById('ability-1').textContent = mon.basic.ability.normal[0];

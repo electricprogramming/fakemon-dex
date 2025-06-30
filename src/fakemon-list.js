@@ -37,7 +37,7 @@ const fakemonList = {
       'Level 36',
       'Panlin'
     ],
-    dex_entry: 'Bambao are playful explorers often spotted climbing trees or traipsing through the forest. From a young age, they have an affinity for food and eat for a large portion of their waking hours.',
+    dex_entry: 'Bambao are playful explorers often spotted climbing trees or traipsing through the forest. From a young age, they have an affinity for food and spend a large portion of their waking hours eating.',
     name_origin: [
       {
         word: 'bamboo',
