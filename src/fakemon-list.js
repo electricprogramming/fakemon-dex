@@ -13,7 +13,7 @@ const fakemonList = {
       }
     },
     training: {
-      ev_yield: { hp: 1 },
+      ev_yield: { speed: 1 },
       catch_rate: 45,
       growth_rate: 'Medium Slow'
     },
@@ -23,12 +23,12 @@ const fakemonList = {
       egg_cycles: 20
     },
     base_stats: {
-      hp: 70,
+      hp: 55,
       attack: 45,
       defense: 50,
       sp_atk: 45,
       sp_def: 55,
-      speed: 45
+      speed: 60
     },
     evo: [
       'Narwhali',
@@ -109,7 +109,7 @@ const fakemonList = {
       }
     },
     training: {
-      ev_yield: { sp_atk: 1, speed: 1 },
+      ev_yield: { sp_atk: 2, speed: 1 },
       catch_rate: 45,
       growth_rate: 'Medium Slow'
     },
