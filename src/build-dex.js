@@ -54,7 +54,7 @@ Object.entries(typeDefenses).forEach(([type, effectiveness]) => {
 // Training
 document.getElementById('ev-yield').textContent =
   Object.entries(mon.training.ev_yield)
-  .map(([key, val]) => {console.log(key, val); return `${val} ${convertStatNameForEvYield(key)}`})
+  .map(([key, val]) => `${val} ${convertStatNameForEvYield(key)}`)
   .join(', ');
 document.getElementById('catch-rate').textContent = `${mon.training.catch_rate} (${((mon.training.catch_rate / 255) * 1/3 * 100).toFixed(1)}% with Pokéball, full HP)`;
 document.getElementById('growth-rate').textContent = mon.training.growth_rate;
@@ -75,14 +75,13 @@ let total = 0;
 
 for (const [stat, val] of Object.entries(mon.base_stats)) {
   total += val; // accumulate total
-  const statName = stat.toUpperCase().replace('_', ' ');
 
   const container = document.createElement('tr');
   container.className = 'stat-container';
   
   const label = document.createElement('td');
   label.className = 'stat-label';
-  label.textContent = convertStatNameForBaseStats(statName);
+  label.textContent = convertStatNameForBaseStats(stat);
   container.appendChild(label);
 
   const value = document.createElement('td');
