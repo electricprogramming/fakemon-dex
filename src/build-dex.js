@@ -64,7 +64,7 @@ document.getElementById('growth-rate').textContent = mon.training.growth_rate;
 document.getElementById('egg-groups').textContent = mon.breeding.egg_groups.join(', ');
 const gender = mon.breeding.gender;
 document.getElementById('gender-ratio').textContent = gender.genderless ? 'genderless' :
-  `♂ ${(gender.male * 100).toFixed(0)}% / ♀ ${(gender.female * 100).toFixed(0)}%`;
+  `♂ ${(gender.male * 100)}% / ♀ ${(gender.female * 100)}%`;
 document.getElementById('egg-cycles').textContent = mon.breeding.egg_cycles;
 
 // Base stats with bars
