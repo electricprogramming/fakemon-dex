@@ -44,7 +44,7 @@ const fakemonList = {
         meaning: 'a type of fast-growing grass with hard, hollow stems, commonly eaten by pandas'
       },
       {
-        word: 'bǎo',
+        word: 'bǎo (宝)',
         meaning: 'Chinese for treasure'
       }
     ]
