@@ -28,10 +28,13 @@ header img {
   padding: 8px;
 }
 a.basic-link {
-  text-decoration-color: #4a90e2;
-  &:hover {
-    text-decoration-color: #f00;
-  }
+  text-decoration: none;
+  color: #2769BE;
+}
+a.basic-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #A42121;
+  color: #A42121;
 }
 h1 {
   text-transform: capitalize;
