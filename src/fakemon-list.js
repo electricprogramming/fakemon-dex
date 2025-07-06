@@ -12,7 +12,7 @@ const fakemonList = {
         hidden: 'Inner Focus'
       }
     },
-    other_info: `Bambao is one of three First Partner Pokémon available in the Jinlu region, along with -- and <a class="basic-link" href="/dex/narwhali">Narwhali</a>.`,
+    other_info: `Bambao is one of three First Partner Pokémon available in the Jinlu region, along with <a class="basic-link" href="/dex/embaa">Embaa</a> and <a class="basic-link" href="/dex/narwhali">Narwhali</a>.`,
     training: {
       ev_yield: { attack: 1 },
       catch_rate: 45,
@@ -56,6 +56,9 @@ const fakemonList = {
   panlin: {
 
   },
+  embaa: {
+    
+  },
   narwhali: {
     basic: {
       name: 'Narwhali',
@@ -69,7 +72,7 @@ const fakemonList = {
         hidden: 'Swift Swim'
       }
     },
-    other_info: `Narwhali is one of three First Partner Pokémon available in the Jinlu region, along with <a class="basic-link" href="/dex/bambao">Bambao</a> and --.`,
+    other_info: `Narwhali is one of three First Partner Pokémon available in the Jinlu region, along with <a class="basic-link" href="/dex/bambao">Bambao</a> and <a class="basic-link" href="/dex/embaa">Embaa</a>.`,
     training: {
       ev_yield: { speed: 1 },
       catch_rate: 45,
