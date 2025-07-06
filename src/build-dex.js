@@ -46,6 +46,8 @@ document.getElementById('ability-1').textContent = mon.basic.ability.normal[0];
 document.getElementById('ability-2').textContent = mon.basic.ability.normal[1] || '--';
 document.getElementById('hidden-ability').textContent = mon.basic.ability.hidden || '--';
 
+document.getElementById('other-info').innerHTML = mon.other_info;
+
 const typeDefenses = calculateTypeDefenses(mon.basic.type);
 Object.entries(typeDefenses).forEach(([type, effectiveness]) => {
   document.querySelector(`.type-box.${type}`).querySelector('.multiplier').textContent = effectiveness;
