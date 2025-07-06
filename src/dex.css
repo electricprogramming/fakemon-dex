@@ -27,6 +27,12 @@ header img {
   border-radius: 8px;
   padding: 8px;
 }
+a.basic-link {
+  text-decoration-color: #4a90e2;
+  &:hover {
+    text-decoration-color: #f00;
+  }
+}
 h1 {
   text-transform: capitalize;
   font-size: 2.5rem;
