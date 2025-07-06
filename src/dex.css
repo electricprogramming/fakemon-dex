@@ -30,6 +30,7 @@ header img {
 a.basic-link {
   text-decoration: none;
   color: #2769BE;
+  transition: color 0.5s ease;
 }
 a.basic-link:hover {
   text-decoration: underline;
