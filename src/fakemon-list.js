@@ -95,7 +95,7 @@ const fakemonList = {
       'Level 36',
       'Baarbaaryk'
     ],
-    dex_entry: ``,
+    dex_entry: `Embaa loves to roll down hills, occasionally leaving behind trails of smoke and singed grass. Some Embaa that have learned to control their flames are known to help keep their Trainers warm on chilly nights.`,
     name_origin: [
       {
         word: 'ember',
