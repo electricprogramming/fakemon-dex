@@ -62,8 +62,8 @@ const fakemonList = {
       number: '004',
       type: ['Fire'],
       species: 'Flame Wool',
-      height: 0.4,
-      weight: 4.0,
+      height: 0.5,
+      weight: 6.8,
       ability: {
         normal: ['Blaze'],
         hidden: 'Flame Body'
@@ -108,7 +108,54 @@ const fakemonList = {
     ]
   },
   scorbaa: {
-
+    basic: {
+      name: 'Scorbaa',
+      number: '005',
+      type: ['Fire'],
+      species: 'Flame Wool',
+      height: 0.8,
+      weight: 12.5,
+      ability: {
+        normal: ['Blaze'],
+        hidden: 'Flame Body'
+      }
+    },
+    training: {
+      ev_yield: { defense: 1, sp_atk: 1 },
+      catch_rate: 45,
+      growth_rate: 'Medium Slow'
+    },
+    breeding: {
+      egg_groups: ['Field', 'Monster'],
+      gender: { male: 0.875, female: 0.125 },
+      egg_cycles: 20
+    },
+    base_stats: {
+      hp: 65,
+      attack: 60,
+      defense: 80,
+      sp_atk: 80,
+      sp_def: 60,
+      speed: 70
+    },
+    evo: [
+      'Embaa',
+      'Level 16',
+      'Scorbaa',
+      'Level 36',
+      'Baarbaaryk'
+    ],
+    dex_entry: `Scorbaa's flames burn hotter as it grows, and its wool now crackles with controlled bursts of fire. It charges into battle with fiery determination, using its ignited fleece to scorch anything that gets too close.`,
+    name_origin: [
+      {
+        word: 'scorch',
+        meaning: 'to burn the surface of something'
+      },
+      {
+        word: 'baa',
+        meaning: 'the soound made by a sheep'
+      }
+    ]
   },
   baarbaaryk: {
 
