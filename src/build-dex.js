@@ -55,7 +55,7 @@ Object.entries(typeDefenses).forEach(([type, effectiveness]) => {
 })
 
 // Training
-document.getElementById('ev-yield').textContent = evYieldAsString;
+document.getElementById('ev-yield').textContent = evYieldAsString(mon.training.ev_yield);
 document.getElementById('catch-rate').textContent = `${mon.training.catch_rate} (${((mon.training.catch_rate / 255) * 1/3 * 100).toFixed(1)}% with Pokéball, full HP)`;
 document.getElementById('growth-rate').textContent = mon.training.growth_rate;
 
