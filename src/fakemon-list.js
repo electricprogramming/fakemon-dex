@@ -63,7 +63,7 @@ const fakemonList = {
       type: ['Fire'],
       species: 'Flame Wool',
       height: 0.5,
-      weight: 6.8,
+      weight: 12.8,
       ability: {
         normal: ['Blaze'],
         hidden: 'Flame Body'
@@ -153,12 +153,59 @@ const fakemonList = {
       },
       {
         word: 'baa',
-        meaning: 'the soound made by a sheep'
+        meaning: 'the sound made by a sheep'
       }
     ]
   },
   baarbaaryk: {
-
+    basic: {
+      name: 'Baarbaaryk',
+      number: '006',
+      type: ['Fire', 'Poison'],
+      species: 'Flame Wool',
+      height: 1.6,
+      weight: 75.4,
+      ability: {
+        normal: ['Blaze'],
+        hidden: 'Flame Body'
+      }
+    },
+    training: {
+      ev_yield: { sp_atk: 2, atk: 1 },
+      catch_rate: 45,
+      growth_rate: 'Medium Slow'
+    },
+    breeding: {
+      egg_groups: ['Field', 'Monster'],
+      gender: { male: 0.875, female: 0.125 },
+      egg_cycles: 20
+    },
+    base_stats: {
+      hp: 80,
+      attack: 90,
+      defense: 80,
+      sp_atk: 105,
+      sp_def: 85,
+      speed: 95
+    },
+    evo: [
+      'Embaa',
+      'Level 16',
+      'Scorbaa',
+      'Level 36',
+      'Baarbaaryk'
+    ],
+    dex_entry: `Baarbaaryk's wool burns with toxic embers that release poisonous smoke when disturbed. It charges fiercely, leaving behind scorched, hazardous terrain for its foes.`,
+    name_origin: [
+      {
+        word: 'baa',
+        meaning: 'the sound made by a sheep'
+      },
+      {
+        word: 'barbaric',
+        meaning: 'savage, uncivilized'
+      }
+    ]
   },
   narwhali: {
     basic: {
