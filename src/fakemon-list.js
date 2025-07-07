@@ -180,7 +180,7 @@ const fakemonList = {
     },
     breeding: {
       egg_groups: ['Water-2'],
-      gender: { male: 0.5, female: 0.5 },
+      gender: { male: 0.875, female: 0.125 },
       egg_cycles: 20
     },
     base_stats: {
@@ -214,7 +214,7 @@ const fakemonList = {
     basic: {
       name: 'Narquarion',
       number: '009',
-      type: ['Water'],
+      type: ['Water', 'Steel'],
       species: 'Narwhal',
       height: 2,
       weight: 92.3,
@@ -230,7 +230,7 @@ const fakemonList = {
     },
     breeding: {
       egg_groups: ['Water-2'],
-      gender: { male: 0.5, female: 0.5 },
+      gender: { male: 0.875, female: 0.125 },
       egg_cycles: 20
     },
     base_stats: {
