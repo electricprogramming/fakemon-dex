@@ -1,7 +1,8 @@
 import fakemonList from './fakemon-list.js';
 import { weight, height } from './conversions.js';
 import calculateTypeDefenses from './type-defenses.js';
-import { convertStatNameForBaseStats, convertStatNameForEvYield } from './convert-stat-name.js';
+import { convertStatNameForBaseStats } from './convert-stat-name.js';
+import evYieldAsString from './convert-ev-yield.js';
 
 const fakemonName = window.location.pathname.split('/dex/')[1];
 const mon = fakemonList[fakemonName];
@@ -54,10 +55,7 @@ Object.entries(typeDefenses).forEach(([type, effectiveness]) => {
 })
 
 // Training
-document.getElementById('ev-yield').textContent =
-  Object.entries(mon.training.ev_yield)
-  .map(([key, val]) => `${val} ${convertStatNameForEvYield(key)}`)
-  .join(', ');
+document.getElementById('ev-yield').textContent = evYieldAsString;
 document.getElementById('catch-rate').textContent = `${mon.training.catch_rate} (${((mon.training.catch_rate / 255) * 1/3 * 100).toFixed(1)}% with Pokéball, full HP)`;
 document.getElementById('growth-rate').textContent = mon.training.growth_rate;
 
