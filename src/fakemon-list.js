@@ -171,7 +171,7 @@ const fakemonList = {
       }
     },
     training: {
-      ev_yield: { sp_atk: 2, atk: 1 },
+      ev_yield: { sp_atk: 2, attack: 1 },
       catch_rate: 45,
       growth_rate: 'Medium Slow'
     },
