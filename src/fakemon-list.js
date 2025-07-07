@@ -57,7 +57,61 @@ const fakemonList = {
 
   },
   embaa: {
-    
+    basic: {
+      name: 'Embaa',
+      number: '004',
+      type: ['Fire'],
+      species: 'Flame Wool',
+      height: 0.4,
+      weight: 4.0,
+      ability: {
+        normal: ['Blaze'],
+        hidden: 'Flame Body'
+      }
+    },
+    other_info: `Embaa is one of three First Partner Pokémon available in the Jinlu region, along with <a class="basic-link" href="/dex/bambao">Bambao</a> and <a class="basic-link" href="/dex/narwhali">Narwhali</a>.`,
+    training: {
+      ev_yield: { sp_atk: 1 },
+      catch_rate: 45,
+      growth_rate: 'Medium Slow'
+    },
+    breeding: {
+      egg_groups: ['Field', 'Monster'],
+      gender: { male: 0.875, female: 0.125 },
+      egg_cycles: 20
+    },
+    base_stats: {
+      hp: 50,
+      attack: 45,
+      defense: 55,
+      sp_atk: 60,
+      sp_def: 55,
+      speed: 45
+    },
+    evo: [
+      'Embaa',
+      'Level 16',
+      'Scorbaa',
+      'Level 36',
+      'Baarbaaryk'
+    ],
+    dex_entry: ``,
+    name_origin: [
+      {
+        word: 'ember',
+        meaning: 'a warm, glowing fragment of wood or coal from a fire'
+      },
+      {
+        word: 'baa',
+        meaning: 'the sound made by a sheep'
+      }
+    ]
+  },
+  scorbaa: {
+
+  },
+  baarbaaryk: {
+
   },
   narwhali: {
     basic: {
@@ -80,7 +134,7 @@ const fakemonList = {
     },
     breeding: {
       egg_groups: ['Water-2'],
-      gender: { male: 0.5, female: 0.5 },
+      gender: { male: 0.875, female: 0.125 },
       egg_cycles: 20
     },
     base_stats: {
